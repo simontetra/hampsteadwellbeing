@@ -191,7 +191,7 @@ export function WellbeingDirectory() {
           {directoryCategories.map((c) => (
             <Link
               key={c.slug}
-              href={`/directory/${c.slug}`}
+              href={`/directory/${c.slug}/`}
               className="inline-flex items-center gap-1 text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
             >
               {c.heading} <ArrowRight size={13} />

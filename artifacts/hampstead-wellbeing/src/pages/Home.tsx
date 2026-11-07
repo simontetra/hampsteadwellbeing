@@ -380,7 +380,7 @@ export default function Home() {
             {/* Card: Corporate Wellness */}
             <motion.a 
               variants={fadeInUp}
-              href="/corporate-wellness"
+              href="/corporate-wellness/"
               className="group bg-card rounded-3xl p-8 border border-border/50 hover:border-primary/40 hover:bg-white hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 flex flex-col h-full"
             >
               <Briefcase size={32} className="text-primary mb-6 group-hover:rotate-12 transition-transform duration-500" />
@@ -396,7 +396,7 @@ export default function Home() {
             {/* Card: Mindfulness */}
             <motion.a 
               variants={fadeInUp}
-              href="/mindfulness"
+              href="/mindfulness/"
               className="group bg-card rounded-3xl p-8 border border-border/50 hover:border-primary/40 hover:bg-white hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 flex flex-col h-full"
             >
               <Wind size={32} className="text-primary mb-6 group-hover:rotate-12 transition-transform duration-500" />

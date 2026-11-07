@@ -33,13 +33,13 @@ export function Footer() {
           <ul className="flex flex-col gap-3">
             {directoryCategories.map((c) => (
               <li key={c.slug}>
-                <Link href={`/directory/${c.slug}`} className="text-background/80 hover:text-primary-foreground transition-colors">
+                <Link href={`/directory/${c.slug}/`} className="text-background/80 hover:text-primary-foreground transition-colors">
                   {c.name}
                 </Link>
               </li>
             ))}
             <li>
-              <Link href="/directory" className="text-background/80 hover:text-primary-foreground transition-colors">
+              <Link href="/directory/" className="text-background/80 hover:text-primary-foreground transition-colors">
                 All listings
               </Link>
             </li>
@@ -53,17 +53,17 @@ export function Footer() {
           </h4>
           <ul className="flex flex-col gap-3">
             <li>
-              <Link href="/corporate-wellness" className="text-background/80 hover:text-primary-foreground transition-colors">
+              <Link href="/corporate-wellness/" className="text-background/80 hover:text-primary-foreground transition-colors">
                 Corporate Wellness
               </Link>
             </li>
             <li>
-              <Link href="/mindfulness" className="text-background/80 hover:text-primary-foreground transition-colors">
+              <Link href="/mindfulness/" className="text-background/80 hover:text-primary-foreground transition-colors">
                 Mindfulness
               </Link>
             </li>
             <li>
-              <Link href="/breathwork" className="text-background/80 hover:text-primary-foreground transition-colors">
+              <Link href="/breathwork/" className="text-background/80 hover:text-primary-foreground transition-colors">
                 Breathwork
               </Link>
             </li>

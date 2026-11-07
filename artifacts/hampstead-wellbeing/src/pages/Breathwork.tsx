@@ -240,7 +240,7 @@ export default function Breathwork() {
               </p>
             </div>
             <Link
-              href="/corporate-wellness"
+              href="/corporate-wellness/"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-sans font-semibold text-sm tracking-wide transition-all duration-300 hover:-translate-y-0.5 whitespace-nowrap"
               style={{ background: "#2C1F14", color: "#FAF8F4" }}
             >

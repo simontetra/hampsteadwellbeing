@@ -21,7 +21,7 @@ export default function DirectoryCategory({ params }: { params: { slug: string }
           <nav aria-label="Breadcrumb" className="mb-6 font-sans text-xs tracking-wide text-muted-foreground">
             <Link href="/" className="hover:text-primary transition-colors">Home</Link>
             <span className="mx-2">/</span>
-            <Link href="/directory" className="hover:text-primary transition-colors">Directory</Link>
+            <Link href="/directory/" className="hover:text-primary transition-colors">Directory</Link>
             <span className="mx-2">/</span>
             <span className="text-foreground/80">{category.name}</span>
           </nav>
@@ -54,14 +54,14 @@ export default function DirectoryCategory({ params }: { params: { slug: string }
               {others.map((c) => (
                 <Link
                   key={c.slug}
-                  href={`/directory/${c.slug}`}
+                  href={`/directory/${c.slug}/`}
                   className="inline-flex items-center gap-1 text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
                 >
                   {c.heading} <ArrowRight size={13} />
                 </Link>
               ))}
               <Link
-                href="/directory"
+                href="/directory/"
                 className="inline-flex items-center gap-1 text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
               >
                 The whole directory <ArrowRight size={13} />

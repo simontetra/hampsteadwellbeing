@@ -62,8 +62,9 @@ export function pageMeta(path: string): PageMeta | undefined {
   return pages.find((p) => p.path === clean);
 }
 
+/** Pages are addressed with a trailing slash (/team/), which is how Render serves their files. */
 export function canonicalUrl(path: string): string {
-  return path === "/" ? `${SITE_URL}/` : `${SITE_URL}${path}`;
+  return path === "/" ? `${SITE_URL}/` : `${SITE_URL}${path}/`;
 }
 
 export const NOT_FOUND_META = {

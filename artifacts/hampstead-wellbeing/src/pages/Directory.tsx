@@ -30,7 +30,7 @@ export default function Directory() {
             {directoryCategories.map((c) => (
               <Link
                 key={c.slug}
-                href={`/directory/${c.slug}`}
+                href={`/directory/${c.slug}/`}
                 className="group flex flex-col rounded-2xl border border-border/60 bg-card p-6 hover:border-primary/40 hover:shadow-md transition-all duration-200"
               >
                 <h2 className="font-display text-2xl font-medium text-foreground mb-2">{c.name}</h2>

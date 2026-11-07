@@ -47,11 +47,11 @@ for (const page of pages) {
   if (page.path === "/") {
     fs.writeFileSync(path.join(publicDir, "index.html"), html);
   } else {
-    // Both /team/index.html (for /team/) and /team.html (for /team).
+    // team/index.html, served at /team/ (the canonical address). Render answers
+    // /team itself with the home page's HTML, and the browser then shows Team.
     const dir = path.join(publicDir, page.path);
     fs.mkdirSync(dir, { recursive: true });
     fs.writeFileSync(path.join(dir, "index.html"), html);
-    fs.writeFileSync(`${dir}.html`, html);
   }
   console.log(`prerendered ${page.path}`);
 }

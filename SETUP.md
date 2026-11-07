@@ -26,7 +26,7 @@ The key is built into the page, so after changing it, run Manual Deploy → Clea
 |---|---|---|
 | `/*` | `/index.html` | Rewrite |
 
-Every page in `src/lib/seo.ts` is built as its own HTML file, and Render serves those directly. This rule only catches other addresses (a mistyped link, say), which then show the "Page not found" page.
+Every page in `src/lib/seo.ts` is built as `<page>/index.html`, which Render serves at `/<page>/` (the address used in links, the sitemap and canonical tags). Render answers everything else with the home page HTML, and the browser then shows the right page, or "Page not found" for a mistyped link.
 
 ## How the pages are built
 

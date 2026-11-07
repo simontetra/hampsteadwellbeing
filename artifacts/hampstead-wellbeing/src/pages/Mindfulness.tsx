@@ -454,7 +454,7 @@ export default function Mindfulness() {
                 We offer breathwork and mindfulness sessions as part of corporate wellness programmes — delivered in-person at your workplace or remotely.
               </p>
             </div>
-            <Link href="/corporate-wellness" className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-sans font-semibold text-sm tracking-wide transition-all duration-300 hover:-translate-y-0.5 whitespace-nowrap" style={{ background: "#2C1F14", color: "#FAF8F4" }}>
+            <Link href="/corporate-wellness/" className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-sans font-semibold text-sm tracking-wide transition-all duration-300 hover:-translate-y-0.5 whitespace-nowrap" style={{ background: "#2C1F14", color: "#FAF8F4" }}>
               Corporate wellness <ArrowRight size={14} />
             </Link>
           </motion.div>

@@ -192,7 +192,7 @@ export default function CorporateWellness() {
             </motion.ul>
             <motion.div variants={fadeInUp}>
               <Link
-                href="/mindfulness"
+                href="/mindfulness/"
                 className="inline-flex items-center gap-2 font-sans font-semibold text-sm transition-colors hover:underline"
                 style={{ color: "#8B7355" }}
               >

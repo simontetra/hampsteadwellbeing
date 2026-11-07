@@ -21,7 +21,7 @@ export default function NotFound() {
               Go to the home page
             </Link>
             <Link
-              href="/directory"
+              href="/directory/"
               className="inline-flex items-center px-6 py-3 rounded-full font-sans font-semibold text-sm tracking-wide border border-border"
             >
               Browse the directory
