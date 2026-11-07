@@ -26,7 +26,27 @@ The key is built into the page, so after changing it, run Manual Deploy → Clea
 |---|---|---|
 | `/*` | `/index.html` | Rewrite |
 
-This lets pages such as /team and /breathwork open directly.
+Every page in `src/lib/seo.ts` is built as its own HTML file, and Render serves those directly. This rule only catches other addresses (a mistyped link, say), which then show the "Page not found" page.
+
+## How the pages are built
+
+`pnpm run build:static` runs three steps (see `artifacts/hampstead-wellbeing/package.json`):
+
+1. builds the website as the browser loads it, into `dist/public`;
+2. builds the same app to run during the build, into `dist/server`;
+3. `scripts/prerender.mjs` writes each page as finished HTML with its own title, description and canonical address, and writes `sitemap.xml`.
+
+So search engines read each page's text without running JavaScript, and the sitemap stays up to date on every deploy.
+
+## Adding to the directory
+
+Everything is in `artifacts/hampstead-wellbeing/src/data/wellbeingDirectory.ts`.
+
+- **A listing:** add a line to `wellbeingProviders`. Its `category` must match a category's `name` exactly.
+- **A category:** add an entry to `directoryCategories` (name, slug, heading, intro). The category page, `/directory/<slug>`, its sitemap entry, the filter button and the footer link all follow from that entry. Add a colour for it in `categoryColour` in `src/components/WellbeingDirectory.tsx` (otherwise it uses the default brown).
+- **A new standalone page:** add its route in `src/App.tsx` and its title and description in `src/lib/seo.ts`, so it's built and listed in the sitemap.
+
+Pushing to `main` deploys automatically.
 
 ## Domain
 

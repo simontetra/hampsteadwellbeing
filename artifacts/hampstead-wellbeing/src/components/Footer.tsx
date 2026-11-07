@@ -1,4 +1,6 @@
 import { Heart } from "lucide-react";
+import { Link } from "wouter";
+import { directoryCategories } from "@/data/wellbeingDirectory";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -23,21 +25,23 @@ export function Footer() {
           </a>
         </div>
 
-        {/* Education Links */}
+        {/* Directory Links */}
         <div className="flex flex-col gap-4">
           <h4 className="font-sans font-semibold tracking-wider uppercase text-sm text-primary">
-            Education
+            Directory
           </h4>
           <ul className="flex flex-col gap-3">
+            {directoryCategories.map((c) => (
+              <li key={c.slug}>
+                <Link href={`/directory/${c.slug}`} className="text-background/80 hover:text-primary-foreground transition-colors">
+                  {c.name}
+                </Link>
+              </li>
+            ))}
             <li>
-              <a href="https://www.exampracticepapers.com" target="_blank" rel="noopener noreferrer" className="text-background/80 hover:text-primary-foreground transition-colors">
-                Exam Practice Papers
-              </a>
-            </li>
-            <li>
-              <a href="https://www.find-tutors.co.uk" target="_blank" rel="noopener noreferrer" className="text-background/80 hover:text-primary-foreground transition-colors">
-                Find a Tutor
-              </a>
+              <Link href="/directory" className="text-background/80 hover:text-primary-foreground transition-colors">
+                All listings
+              </Link>
             </li>
           </ul>
         </div>
@@ -49,9 +53,19 @@ export function Footer() {
           </h4>
           <ul className="flex flex-col gap-3">
             <li>
-              <a href="https://www.findyogateachers.com" target="_blank" rel="noopener noreferrer" className="text-background/80 hover:text-primary-foreground transition-colors">
-                Find Yoga Teachers
-              </a>
+              <Link href="/corporate-wellness" className="text-background/80 hover:text-primary-foreground transition-colors">
+                Corporate Wellness
+              </Link>
+            </li>
+            <li>
+              <Link href="/mindfulness" className="text-background/80 hover:text-primary-foreground transition-colors">
+                Mindfulness
+              </Link>
+            </li>
+            <li>
+              <Link href="/breathwork" className="text-background/80 hover:text-primary-foreground transition-colors">
+                Breathwork
+              </Link>
             </li>
             <li>
               <a href="https://www.findfitnessinstructors.com" target="_blank" rel="noopener noreferrer" className="text-background/80 hover:text-primary-foreground transition-colors">

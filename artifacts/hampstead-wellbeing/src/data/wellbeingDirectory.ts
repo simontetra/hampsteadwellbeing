@@ -32,7 +32,6 @@ export const wellbeingProviders: WellbeingProvider[] = [
   { name: "YOAS Yoga Retreats", category: "Yoga Teachers", area: "Herne Hill", pricing: "£££", instagram: "@yoasyogaretreats", website: "https://yoasyogaretreats.com", notes: "International yoga retreat operator" },
   { name: "Our Retreat", category: "Yoga Teachers", area: "City of London", pricing: "£££", instagram: "@ourretreat", website: "https://ourretreat.co.uk", notes: "Luxury wellness retreats" },
   { name: "Yoga Rocks", category: "Yoga Teachers", area: "London", pricing: "£££", instagram: "@yogarocksretreats", website: "https://yogarocks.co.uk", notes: "Yoga retreats across Europe" },
-  { name: "FindYogaTeachers.com", category: "Yoga Teachers", area: "UK-wide", pricing: "££", website: "https://www.findyogateachers.com", notes: "Directory of independent yoga teachers — find your perfect match" },
 
   // ── PILATES ───────────────────────────────────────────────
   { name: "Ten Health & Fitness", category: "Pilates", area: "Multiple London locations", pricing: "£££", instagram: "@tenhealth", website: "https://ten.co.uk", notes: "Premium reformer Pilates and physiotherapy" },
@@ -61,11 +60,52 @@ export const wellbeingProviders: WellbeingProvider[] = [
   { name: "FindFitnessInstructors.com", category: "Fitness", area: "UK-wide", pricing: "££", website: "https://www.findfitnessinstructors.com", notes: "Directory of independent personal trainers and fitness coaches" },
 ];
 
-export const categories = [
-  "All",
-  "Yoga Studios",
-  "Yoga Teachers",
-  "Pilates",
-  "Meditation",
-  "Fitness",
+export interface DirectoryCategory {
+  /** Must match the `category` field of its providers. */
+  name: string;
+  /** Web address of the category page: /directory/<slug> */
+  slug: string;
+  /** Page heading and title. */
+  heading: string;
+  /** One or two sentences shown at the top of the page and used as its search description. */
+  intro: string;
+}
+
+export const directoryCategories: DirectoryCategory[] = [
+  {
+    name: "Yoga Studios",
+    slug: "yoga-studios",
+    heading: "Yoga Studios in London",
+    intro: "Yoga studios across London, from affordable community studios to premium boutique spaces, with hot yoga, Vinyasa, Hatha and teacher training.",
+  },
+  {
+    name: "Yoga Teachers",
+    slug: "yoga-teachers",
+    heading: "Yoga Teachers & Retreat Organisers in London",
+    intro: "Private yoga teachers, at-home sessions and London-based organisers of yoga retreats in the UK and abroad.",
+  },
+  {
+    name: "Pilates",
+    slug: "pilates",
+    heading: "Pilates Studios in London",
+    intro: "Reformer and mat Pilates in London, from boutique studios to instructors who come to your home or workplace.",
+  },
+  {
+    name: "Meditation",
+    slug: "meditation",
+    heading: "Meditation & Mindfulness in London",
+    intro: "Meditation centres, mindfulness courses and meditation apps, including drop-in classes, MBSR and MBCT courses and Vedic meditation.",
+  },
+  {
+    name: "Fitness",
+    slug: "fitness",
+    heading: "Fitness Studios & Gyms in London",
+    intro: "Boutique fitness studios, group training and premium health clubs across London.",
+  },
 ];
+
+export const categories = ["All", ...directoryCategories.map((c) => c.name)];
+
+export function providersIn(category: string): WellbeingProvider[] {
+  return wellbeingProviders.filter((p) => p.category === category);
+}

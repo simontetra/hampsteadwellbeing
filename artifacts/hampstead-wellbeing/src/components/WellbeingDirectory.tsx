@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { ExternalLink, Instagram, Search, X, MapPin } from "lucide-react";
-import { wellbeingProviders, categories, type WellbeingProvider } from "@/data/wellbeingDirectory";
+import { Link } from "wouter";
+import { ExternalLink, Instagram, Search, X, MapPin, ArrowRight } from "lucide-react";
+import { wellbeingProviders, categories, directoryCategories, type WellbeingProvider } from "@/data/wellbeingDirectory";
 
 const categoryColour: Record<string, string> = {
   "Yoga Studios":  "#8B7355",
@@ -16,7 +17,7 @@ const pricingLabel: Record<string, string> = {
   "£££": "Premium",
 };
 
-function ProviderCard({ p }: { p: WellbeingProvider }) {
+export function ProviderCard({ p }: { p: WellbeingProvider }) {
   return (
     <div className="flex flex-col gap-3 rounded-2xl border border-border/60 bg-card p-5 hover:shadow-md transition-shadow duration-200">
       {/* Category pill */}
@@ -180,6 +181,24 @@ export function WellbeingDirectory() {
           No providers found. Try a different search or category.
         </p>
       )}
+
+      {/* Category pages */}
+      <div className="mt-10">
+        <p className="font-sans text-xs font-semibold tracking-[0.18em] uppercase mb-3" style={{ color: "#8B7355" }}>
+          Browse by category
+        </p>
+        <div className="flex flex-wrap gap-x-6 gap-y-2">
+          {directoryCategories.map((c) => (
+            <Link
+              key={c.slug}
+              href={`/directory/${c.slug}`}
+              className="inline-flex items-center gap-1 text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
+            >
+              {c.heading} <ArrowRight size={13} />
+            </Link>
+          ))}
+        </div>
+      </div>
 
       <p className="text-xs text-muted-foreground/50 mt-8 font-light">
         This directory is provided for information only. Listings are drawn from publicly available sources. Hampstead Wellbeing is not affiliated with the providers listed unless stated.

@@ -52,7 +52,7 @@ export default function Home() {
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0 z-0">
           <img 
-            src={`${import.meta.env.BASE_URL}images/hero-bg.png`}
+            src={`${import.meta.env.BASE_URL}images/hero-bg.webp`}
             alt="Hampstead Wellbeing — holistic wellness centre, nurturing mind, body and soul" 
             className="w-full h-full object-cover opacity-80"
           />
@@ -102,7 +102,7 @@ export default function Home() {
       </section>
 
       {/* ETHOS SECTION */}
-      <section id="ethos" className="py-24 md:py-32 px-6 bg-background">
+      <section id="ethos" className="py-24 md:py-32 px-6 bg-background overflow-x-clip">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16 md:gap-24">
           <motion.div 
             initial="hidden"
@@ -113,7 +113,7 @@ export default function Home() {
           >
             <div className="aspect-square rounded-[2rem] md:rounded-[3rem] overflow-hidden bg-card border border-border/50 shadow-2xl shadow-primary/5 flex items-center justify-center p-12">
               <img 
-                src={`${import.meta.env.BASE_URL}images/ethos-art.png`}
+                src={`${import.meta.env.BASE_URL}images/ethos-art.webp`}
                 alt="Holistic wellbeing philosophy — Hampstead Wellbeing"
                 className="w-full h-full object-contain"
               />
@@ -165,65 +165,13 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <motion.div 
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-8"
-          >
-            {/* Education Card 1 */}
-            <motion.a 
-              variants={fadeInUp}
-              href="https://www.exampracticepapers.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="group bg-background rounded-3xl p-10 md:p-12 shadow-lg shadow-black/5 border border-border/50 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 transition-all duration-500 relative overflow-hidden flex flex-col h-full"
-            >
-              <div className="absolute top-0 right-0 p-8 opacity-0 group-hover:opacity-100 group-hover:-translate-x-2 transition-all duration-300">
-                <ArrowRight className="text-primary" size={24} />
-              </div>
-              
-              <div className="w-16 h-16 rounded-2xl bg-secondary/50 flex items-center justify-center text-primary mb-8 group-hover:scale-110 transition-transform duration-500">
-                <BookOpen size={32} />
-              </div>
-              
-              <h3 className="font-display text-3xl font-medium text-foreground mb-4">Exam Practice Papers</h3>
-              <p className="font-sans text-foreground/70 leading-relaxed mt-auto">
-                Expertly crafted practice papers to help students build confidence and excel in their exams. From 11+ to GCSEs, our resources are trusted by thousands of students and parents across the UK.
-              </p>
-            </motion.a>
-
-            {/* Education Card 2 */}
-            <motion.a 
-              variants={fadeInUp}
-              href="https://www.find-tutors.co.uk" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="group bg-background rounded-3xl p-10 md:p-12 shadow-lg shadow-black/5 border border-border/50 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 transition-all duration-500 relative overflow-hidden flex flex-col h-full"
-            >
-              <div className="absolute top-0 right-0 p-8 opacity-0 group-hover:opacity-100 group-hover:-translate-x-2 transition-all duration-300">
-                <ArrowRight className="text-primary" size={24} />
-              </div>
-              
-              <div className="w-16 h-16 rounded-2xl bg-secondary/50 flex items-center justify-center text-primary mb-8 group-hover:scale-110 transition-transform duration-500">
-                <GraduationCap size={32} />
-              </div>
-              
-              <h3 className="font-display text-3xl font-medium text-foreground mb-4">Find a Tutor</h3>
-              <p className="font-sans text-foreground/70 leading-relaxed mt-auto">
-                Connect with exceptional tutors who inspire, motivate and bring out the best in every learner. Our network spans all subjects and levels to ensure the perfect match.
-              </p>
-            </motion.a>
-          </motion.div>
-
           {/* ADULT EDUCATION SUB-SECTION */}
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeInUp}
-            className="mt-20"
+            className=""
           >
             <div className="rounded-3xl border border-primary/20 bg-background overflow-hidden">
               {/* Banner header */}

@@ -61,6 +61,12 @@ export function Navbar() {
             </a>
           ))}
           <Link
+            href="/directory"
+            className={location.startsWith("/directory") ? activeLinkClass : linkClass}
+          >
+            Directory
+          </Link>
+          <Link
             href="/team"
             className={location === "/team" ? activeLinkClass : linkClass}
           >
@@ -96,6 +102,13 @@ export function Navbar() {
               {link.name}
             </a>
           ))}
+          <Link
+            href="/directory"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="text-foreground/90 font-display text-2xl hover:text-primary transition-colors"
+          >
+            Directory
+          </Link>
           <Link
             href="/team"
             onClick={() => setIsMobileMenuOpen(false)}

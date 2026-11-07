@@ -15,7 +15,7 @@ const people: { name: string; role: string; photo: string; bio: React.ReactNode[
   {
     name: "Simon Dale",
     role: "Co-Founder",
-    photo: `${base}images/founder-headshot.jpg`,
+    photo: `${base}images/founder-headshot.webp`,
     bio: [
       "Simon is a writer, artist, and serial entrepreneur with a lifelong passion for making things that matter. His career spans creative industries and digital ventures — from storytelling and visual art to building platforms that connect and empower people.",
       <>As co-founder of <a href="https://www.mandy.com" target="_blank" rel="noopener noreferrer" style={linkStyle}>The Mandy Network</a>, Simon helped shape one of the most recognised communities in the creative industries, giving performers and industry professionals a trusted place to find work and opportunity. That experience instilled a deep belief in the power of fair, accessible platforms — a belief that sits at the heart of Hampstead Wellbeing.</>,
@@ -25,7 +25,7 @@ const people: { name: string; role: string; photo: string; bio: React.ReactNode[
   {
     name: "Annameka Dale",
     role: "Co-Founder",
-    photo: `${base}images/annameka-headshot.jpg`,
+    photo: `${base}images/annameka-headshot.webp`,
     bio: [
       "Annameka is a co-founder of Hampstead Wellbeing and the driving force behind its real-world wellbeing experiences. A qualified yoga teacher, she has designed and delivered yoga and wellness retreats for women focused on self-appreciation and holistic wellbeing, and delivers weekly Hatha yoga classes.",
       "Her professional background spans nearly a decade at Global Education and Training for Energy, where she rose to Senior Event Consultant — delivering high-profile international events across Europe, the Middle East, Central Asia, and North America, and building lasting relationships with senior leaders. That operational rigour, combined with genuine warmth, is evident in everything she brings to Hampstead Wellbeing.",
