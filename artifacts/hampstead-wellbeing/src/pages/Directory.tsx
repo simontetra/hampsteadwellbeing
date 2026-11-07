@@ -19,10 +19,10 @@ export default function Directory() {
 
           <div className="max-w-3xl mb-12">
             <h1 className="font-display text-4xl md:text-5xl font-medium text-foreground mb-5">
-              London Wellness Directory
+              Wellbeing Directory
             </h1>
             <p className="font-sans text-lg font-light text-muted-foreground leading-relaxed">
-              Our curated guide to yoga studios, yoga teachers, Pilates, meditation centres and fitness providers across London. Choose a category, or search all the listings below.
+              Our curated guide to yoga studios, yoga teachers, Pilates, meditation and fitness providers across the UK, plus online classes and apps you can use anywhere. Choose a category, or search all the listings below.
             </p>
           </div>
 

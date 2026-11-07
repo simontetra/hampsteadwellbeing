@@ -101,13 +101,13 @@ export function WellbeingDirectory() {
           className="font-sans text-xs font-semibold tracking-[0.22em] uppercase mb-2"
           style={{ color: "#C8A951" }}
         >
-          London Wellness Directory
+          Wellbeing Directory
         </p>
         <h3 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3">
           Find Your Wellbeing Practice
         </h3>
         <p className="font-sans text-base font-light text-muted-foreground leading-relaxed">
-          A curated guide to yoga studios, teachers, Pilates, meditation centres, and fitness providers across London.
+          A curated guide to yoga studios, teachers, Pilates, meditation and fitness providers across the UK, plus online classes and apps you can use anywhere.
         </p>
       </div>
 
@@ -134,7 +134,7 @@ export function WellbeingDirectory() {
           )}
         </div>
         <a
-          href="https://www.google.com/maps/search/yoga+wellness+london/"
+          href="https://www.google.com/maps/search/yoga+wellness+near+me/"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1.5 text-xs font-semibold tracking-wide uppercase px-4 py-2.5 rounded-xl border border-border/60 bg-card hover:bg-secondary/50 transition-colors text-muted-foreground hover:text-foreground"

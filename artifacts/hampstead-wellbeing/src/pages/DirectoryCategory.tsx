@@ -28,7 +28,7 @@ export default function DirectoryCategory({ params }: { params: { slug: string }
 
           <div className="max-w-3xl mb-12">
             <p className="font-sans text-xs font-semibold tracking-[0.22em] uppercase mb-3" style={{ color: "#C8A951" }}>
-              London Wellness Directory
+              Wellbeing Directory
             </p>
             <h1 className="font-display text-4xl md:text-5xl font-medium text-foreground mb-5">
               {category.heading}

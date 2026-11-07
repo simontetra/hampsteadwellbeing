@@ -368,9 +368,9 @@ export default function Home() {
               className="cursor-pointer group bg-card rounded-3xl p-8 border border-border/50 hover:border-primary/40 hover:bg-white hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 flex flex-col h-full"
             >
               <ListChecks size={32} className="text-primary mb-6 group-hover:rotate-12 transition-transform duration-500" />
-              <h3 className="font-display text-2xl font-medium text-foreground mb-3">London Wellness Directory</h3>
+              <h3 className="font-display text-2xl font-medium text-foreground mb-3">Wellbeing Directory</h3>
               <p className="font-sans text-sm text-foreground/70 leading-relaxed mb-6 flex-grow">
-                Our own curated guide to yoga studios, teachers, Pilates, meditation centres and fitness providers across London.
+                Our own curated guide to yoga studios, teachers, Pilates, meditation and fitness providers across the UK, plus online options you can use anywhere.
               </p>
               <span className="text-primary text-sm font-semibold tracking-wide flex items-center gap-1 uppercase">
                 Browse <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />

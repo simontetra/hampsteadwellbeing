@@ -74,32 +74,32 @@ export const directoryCategories: DirectoryCategory[] = [
   {
     name: "Yoga Studios",
     slug: "yoga-studios",
-    heading: "Yoga Studios in London",
-    intro: "Yoga studios across London, from affordable community studios to premium boutique spaces, with hot yoga, Vinyasa, Hatha and teacher training.",
+    heading: "Yoga Studios",
+    intro: "Yoga studios, from affordable community studios to premium boutique spaces, with hot yoga, Vinyasa, Hatha and teacher training.",
   },
   {
     name: "Yoga Teachers",
     slug: "yoga-teachers",
-    heading: "Yoga Teachers & Retreat Organisers in London",
-    intro: "Private yoga teachers, at-home sessions and London-based organisers of yoga retreats in the UK and abroad.",
+    heading: "Yoga Teachers & Retreat Organisers",
+    intro: "Private yoga teachers, at-home sessions and organisers of yoga retreats in the UK and abroad.",
   },
   {
     name: "Pilates",
     slug: "pilates",
-    heading: "Pilates Studios in London",
-    intro: "Reformer and mat Pilates in London, from boutique studios to instructors who come to your home or workplace.",
+    heading: "Pilates Studios & Instructors",
+    intro: "Reformer and mat Pilates, from boutique studios to instructors who come to your home or workplace.",
   },
   {
     name: "Meditation",
     slug: "meditation",
-    heading: "Meditation & Mindfulness in London",
+    heading: "Meditation & Mindfulness",
     intro: "Meditation centres, mindfulness courses and meditation apps, including drop-in classes, MBSR and MBCT courses and Vedic meditation.",
   },
   {
     name: "Fitness",
     slug: "fitness",
-    heading: "Fitness Studios & Gyms in London",
-    intro: "Boutique fitness studios, group training and premium health clubs across London.",
+    heading: "Fitness Studios & Personal Trainers",
+    intro: "Boutique fitness studios, group training, health clubs and personal trainers.",
   },
 ];
 

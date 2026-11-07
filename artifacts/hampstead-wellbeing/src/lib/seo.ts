@@ -12,15 +12,15 @@ export interface PageMeta {
 const staticPages: PageMeta[] = [
   {
     path: "/",
-    title: "Hampstead Wellbeing | London Wellness Directory & Holistic Wellbeing",
+    title: "Hampstead Wellbeing | Wellbeing Directory for Yoga, Pilates, Meditation & Fitness",
     description:
-      "A curated London wellness directory of yoga studios, yoga teachers, Pilates, meditation and fitness, plus women's yoga retreats, corporate wellness and mindfulness resources.",
+      "A curated wellbeing directory of yoga, Pilates, meditation and fitness providers across the UK, plus online classes and apps you can use anywhere, women's yoga retreats and corporate wellness.",
   },
   {
     path: "/directory",
-    title: "London Wellness Directory | Hampstead Wellbeing",
+    title: "Wellbeing Directory: Yoga, Pilates, Meditation & Fitness | Hampstead Wellbeing",
     description:
-      "Browse our curated directory of London yoga studios, yoga teachers, Pilates studios, meditation centres and fitness providers, with areas, price levels and links.",
+      "Browse our curated directory of yoga studios, yoga teachers, Pilates, meditation and fitness providers across the UK, and online options you can use anywhere, with locations, price levels and links.",
   },
   {
     path: "/corporate-wellness",
