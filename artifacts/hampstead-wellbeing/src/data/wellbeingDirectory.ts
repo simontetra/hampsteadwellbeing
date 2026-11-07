@@ -47,7 +47,6 @@ export const wellbeingProviders: WellbeingProvider[] = [
   { name: "Kadampa Meditation Centre", category: "Meditation", area: "Clapham", pricing: "£", instagram: "@kadampalondon", website: "https://meditateInlondon.org", notes: "Buddhist-inspired meditation — beginners welcome" },
   { name: "London Meditation Centre", category: "Meditation", area: "Marylebone", pricing: "££", instagram: "@londonmeditationcentre", website: "https://londonmeditationcentre.com", notes: "Vedic meditation and mindfulness courses" },
   { name: "The School of Life", category: "Meditation", area: "Multiple locations", pricing: "££", instagram: "@theschooloflife", website: "https://theschooloflife.com", notes: "Emotional intelligence, mindfulness and wellbeing" },
-  { name: "Serene Me", category: "Meditation", area: "App — anywhere", pricing: "£", instagram: "@serene_me_app", website: "https://serene.me", notes: "Personalised AI-guided meditation — 3 free sessions then £2/month" },
   { name: "Mindfulness London", category: "Meditation", area: "London-wide", pricing: "££", website: "https://mindfulnesslondon.co.uk", notes: "MBSR and MBCT courses — clinically-backed mindfulness" },
   { name: "Headspace", category: "Meditation", area: "App — anywhere", pricing: "££", instagram: "@headspace", website: "https://headspace.com", notes: "Leading meditation app — guided sessions for sleep, focus and calm" },
 

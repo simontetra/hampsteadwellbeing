@@ -77,11 +77,6 @@ export function Footer() {
                 Retreat Listings
               </a>
             </li>
-            <li>
-              <span className="text-background/80">
-                Serene Me App
-              </span>
-            </li>
           </ul>
         </div>
       </div>

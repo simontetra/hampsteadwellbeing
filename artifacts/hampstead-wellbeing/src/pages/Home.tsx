@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Loader2, ArrowRight, BookOpen, GraduationCap, MapPin, Sparkles, CheckCircle2, Sun, Users, Briefcase, Zap, Calculator, Globe, Phone, FileText, Wind, ListChecks } from "lucide-react";
+import { Loader2, ArrowRight, BookOpen, GraduationCap, MapPin, CheckCircle2, Sun, Users, Briefcase, Zap, Calculator, Globe, Phone, FileText, Wind, ListChecks } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { WellbeingDirectory } from "@/components/WellbeingDirectory";
@@ -408,24 +408,6 @@ export default function Home() {
                 Learn more <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
               </span>
             </motion.a>
-
-
-            {/* Card: Serene Me App */}
-            <motion.div 
-              variants={fadeInUp}
-              className="group bg-primary text-primary-foreground rounded-3xl p-8 shadow-lg shadow-primary/20 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 flex flex-col h-full relative overflow-hidden"
-            >
-              <div className="absolute -top-12 -right-12 w-40 h-40 bg-white/10 rounded-full blur-2xl"></div>
-              <Sparkles size={32} className="text-white mb-6 group-hover:scale-110 transition-transform duration-500" />
-              <h3 className="font-display text-2xl font-medium text-white mb-3">Serene Me App</h3>
-              <p className="font-sans text-sm text-white/90 leading-relaxed mb-6 flex-grow">
-                Our meditation app offers guided meditations, breathwork and sleep stories designed to bring calm to even the busiest of minds.
-              </p>
-              <div className="flex items-center gap-3">
-                <span className="px-3 py-1 rounded-full bg-white/20 text-white text-xs font-medium backdrop-blur-md">iOS</span>
-                <span className="px-3 py-1 rounded-full bg-white/20 text-white text-xs font-medium backdrop-blur-md">Android</span>
-              </div>
-            </motion.div>
           </motion.div>
 
           <WellbeingDirectory />
