@@ -43,11 +43,16 @@ function pageHtml(page) {
 }
 
 for (const page of pages) {
-  const file = page.path === "/"
-    ? path.join(publicDir, "index.html")
-    : path.join(publicDir, page.path, "index.html");
-  fs.mkdirSync(path.dirname(file), { recursive: true });
-  fs.writeFileSync(file, pageHtml(page));
+  const html = pageHtml(page);
+  if (page.path === "/") {
+    fs.writeFileSync(path.join(publicDir, "index.html"), html);
+  } else {
+    // Both /team/index.html (for /team/) and /team.html (for /team).
+    const dir = path.join(publicDir, page.path);
+    fs.mkdirSync(dir, { recursive: true });
+    fs.writeFileSync(path.join(dir, "index.html"), html);
+    fs.writeFileSync(`${dir}.html`, html);
+  }
   console.log(`prerendered ${page.path}`);
 }
 
