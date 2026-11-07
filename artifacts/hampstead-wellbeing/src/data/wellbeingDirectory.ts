@@ -57,6 +57,25 @@ export const wellbeingProviders: WellbeingProvider[] = [
   { name: "Gymbox", category: "Fitness", area: "Multiple London locations", pricing: "££", instagram: "@gymbox", website: "https://gymbox.com", notes: "Unique classes including boxing, dance and martial arts" },
   { name: "Third Space", category: "Fitness", area: "Multiple London locations", pricing: "£££", instagram: "@thirdspacelondon", website: "https://thirdspace.london", notes: "Premium health clubs with PT, spa and nutrition" },
   { name: "FindFitnessInstructors.com", category: "Fitness", area: "UK-wide", pricing: "££", website: "https://www.findfitnessinstructors.com", notes: "Directory of independent personal trainers and fitness coaches" },
+
+  // ── ONLINE ────────────────────────────────────────────────
+  { name: "Insight Timer", category: "Online", area: "App — worldwide", pricing: "Free", website: "https://insighttimer.com", notes: "Thousands of free guided meditations, plus breathwork, yoga and sleep sessions. Optional paid subscription for courses and offline listening." },
+  { name: "Medito", category: "Online", area: "App — worldwide", pricing: "Free", website: "https://meditofoundation.org", notes: "Meditation and sleep app from a non-profit foundation. Every meditation, course and sleep story is free, with no premium tier." },
+  { name: "Plum Village App", category: "Online", area: "App — worldwide", pricing: "Free", website: "https://plumvillage.app", notes: "Free mindfulness app in the tradition of Thich Nhat Hanh: guided meditations, Dharma talks and a mindfulness bell." },
+  { name: "UCLA Mindful", category: "Online", area: "App — worldwide", pricing: "Free", website: "https://apps.apple.com/app/ucla-mindful/id1459128935", notes: "Free app from UCLA Health: beginner and wellness meditations, many in several languages, plus weekly drop-in meditation recordings." },
+  { name: "Healthy Minds Program", category: "Online", area: "App — worldwide", pricing: "Free", website: "https://apps.apple.com/app/healthy-minds-program/id1326310617", notes: "Free meditation programme built on research from the Center for Healthy Minds, from the non-profit Humin." },
+  { name: "Yoga With Adriene", category: "Online", area: "Online — worldwide", pricing: "Free", website: "https://yogawithadriene.com", notes: "Free yoga and mindfulness videos on YouTube for all levels, with an optional Find What Feels Good membership." },
+  { name: "Down Dog", category: "Online", area: "App — worldwide", pricing: "£", website: "https://apps.apple.com/app/yoga-down-dog/id983693694", notes: "Yoga app that builds a new practice every session, with 10+ styles and a beginner track. Pilates, HIIT and meditation on the same subscription." },
+
+  // ── MENTAL HEALTH SUPPORT ─────────────────────────────────
+  { name: "NHS Talking Therapies", category: "Mental Health Support", area: "England", pricing: "Free", website: "https://www.nhs.uk/service-search/mental-health/find-an-nhs-talking-therapies-service", notes: "Free NHS therapy for adults with anxiety or depression. You can refer yourself: find your local service." },
+  { name: "Samaritans", category: "Mental Health Support", area: "UK-wide", pricing: "Free", website: "https://www.samaritans.org", notes: "Call 116 123 free, 24 hours a day, 365 days a year, to talk to someone who will listen." },
+  { name: "Shout", category: "Mental Health Support", area: "UK-wide", pricing: "Free", website: "https://giveusashout.org", notes: "Free, 24/7 text support for anyone struggling to cope: text SHOUT to 85258." },
+  { name: "CALM", category: "Mental Health Support", area: "UK-wide", pricing: "Free", website: "https://www.thecalmzone.net", notes: "Campaign Against Living Miserably. Helpline 0800 58 58 58 and webchat, 5pm to midnight every day." },
+  { name: "Papyrus HOPELINE247", category: "Mental Health Support", area: "UK-wide", pricing: "Free", website: "https://www.papyrus-uk.org", notes: "For under-35s with thoughts of suicide, or anyone worried about a young person. Call 0800 068 4141 or text 88247, 24/7." },
+  { name: "Mind", category: "Mental Health Support", area: "England & Wales", pricing: "Free", website: "https://www.mind.org.uk", notes: "Mental health charity: information on conditions, treatments and where to get help, plus the Mind Infoline on 0300 123 3393." },
+  { name: "Rethink Mental Illness", category: "Mental Health Support", area: "England", pricing: "Free", website: "https://www.rethink.org", notes: "Advice line 0808 801 0525 (weekdays, 9.30am to 4pm) on mental illness, the Mental Health Act and carers' rights." },
+  { name: "Anxiety UK", category: "Mental Health Support", area: "UK-wide", pricing: "Free", website: "https://www.anxietyuk.org.uk", notes: "Charity supporting people living with anxiety, stress and anxiety-based depression. Helpline 03444 775 774." },
 ];
 
 export interface DirectoryCategory {
@@ -68,6 +87,8 @@ export interface DirectoryCategory {
   heading: string;
   /** One or two sentences shown at the top of the page and used as its search description. */
   intro: string;
+  /** Optional highlighted note shown above the listings. */
+  notice?: string;
 }
 
 export const directoryCategories: DirectoryCategory[] = [
@@ -100,6 +121,19 @@ export const directoryCategories: DirectoryCategory[] = [
     slug: "fitness",
     heading: "Fitness Studios & Personal Trainers",
     intro: "Boutique fitness studios, group training, health clubs and personal trainers.",
+  },
+  {
+    name: "Online",
+    slug: "online",
+    heading: "Online Yoga, Meditation & Wellbeing",
+    intro: "Apps, video classes and courses you can use anywhere in the world, many of them free.",
+  },
+  {
+    name: "Mental Health Support",
+    slug: "mental-health-support",
+    heading: "Mental Health Support",
+    intro: "Free, confidential helplines, text services and NHS therapy in the UK, for when you're struggling or worried about someone.",
+    notice: "If you or someone else is in immediate danger, call 999 or go to A&E. For urgent help in England, you can also call NHS 111.",
   },
 ];
 

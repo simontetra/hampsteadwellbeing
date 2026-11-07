@@ -14,13 +14,13 @@ const staticPages: PageMeta[] = [
     path: "/",
     title: "Hampstead Wellbeing | Wellbeing Directory for Yoga, Pilates, Meditation & Fitness",
     description:
-      "A curated wellbeing directory of yoga, Pilates, meditation and fitness providers across the UK, plus online classes and apps you can use anywhere, women's yoga retreats and corporate wellness.",
+      "A curated wellbeing directory of yoga, Pilates, meditation, fitness and mental health support across the UK, plus online classes and apps you can use anywhere, women's yoga retreats and corporate wellness.",
   },
   {
     path: "/directory",
     title: "Wellbeing Directory: Yoga, Pilates, Meditation & Fitness | Hampstead Wellbeing",
     description:
-      "Browse our curated directory of yoga studios, yoga teachers, Pilates, meditation and fitness providers across the UK, and online options you can use anywhere, with locations, price levels and links.",
+      "Browse our curated directory of yoga, Pilates, meditation, fitness and mental health support across the UK, and online classes and apps you can use anywhere, with locations, prices and links.",
   },
   {
     path: "/corporate-wellness",

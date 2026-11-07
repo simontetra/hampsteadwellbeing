@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Plus } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { WellbeingDirectory } from "@/components/WellbeingDirectory";
@@ -22,11 +22,11 @@ export default function Directory() {
               Wellbeing Directory
             </h1>
             <p className="font-sans text-lg font-light text-muted-foreground leading-relaxed">
-              Our curated guide to yoga studios, yoga teachers, Pilates, meditation and fitness providers across the UK, plus online classes and apps you can use anywhere. Choose a category, or search all the listings below.
+              Our curated guide to yoga, Pilates, meditation, fitness and mental health support across the UK, plus online classes and apps you can use anywhere. Choose a category, or search all the listings below.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {directoryCategories.map((c) => (
               <Link
                 key={c.slug}
@@ -41,6 +41,18 @@ export default function Directory() {
                 </span>
               </Link>
             ))}
+            <a
+              href="/?subject=listing#contact"
+              className="group flex flex-col rounded-2xl border border-dashed border-primary/40 p-6 hover:border-primary hover:bg-card transition-all duration-200"
+            >
+              <h2 className="font-display text-2xl font-medium text-foreground mb-2">Suggest a listing</h2>
+              <p className="font-sans text-sm font-light text-muted-foreground leading-relaxed flex-1 mb-4">
+                Know a provider, class or app that belongs here, or run one yourself? Tell us and we'll take a look.
+              </p>
+              <span className="text-primary text-xs font-semibold tracking-wide uppercase flex items-center gap-1">
+                <Plus size={13} /> Suggest one
+              </span>
+            </a>
           </div>
 
           <WellbeingDirectory />

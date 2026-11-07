@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -34,6 +35,13 @@ export default function Home() {
       message: ""
     }
   });
+
+  // The directory's "Suggest a listing" link opens the form with that subject chosen.
+  useEffect(() => {
+    if (new URLSearchParams(window.location.search).get("subject") === "listing") {
+      form.setValue("subject", "Suggest a listing");
+    }
+  }, [form]);
 
   const onSubmit = (data: ContactFormData) => {
     submitContact(data, {
@@ -652,6 +660,7 @@ export default function Home() {
                       <option value="Yoga Classes">Yoga Classes</option>
                       <option value="Education">Education</option>
                       <option value="Wellbeing Services">Wellbeing Services</option>
+                      <option value="Suggest a listing">Suggest a listing</option>
                       <option value="Partnerships">Partnerships</option>
                       <option value="Other">Other</option>
                     </select>

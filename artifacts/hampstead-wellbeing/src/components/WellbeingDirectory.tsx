@@ -9,12 +9,15 @@ const categoryColour: Record<string, string> = {
   "Pilates":       "#4a6155",
   "Meditation":    "#2C1F14",
   "Fitness":       "#5a7a65",
+  "Online":        "#6b6f8a",
+  "Mental Health Support": "#9a6b4f",
 };
 
 const pricingLabel: Record<string, string> = {
   "£":   "Budget-friendly",
   "££":  "Mid-range",
   "£££": "Premium",
+  "Free": "Free",
 };
 
 export function ProviderCard({ p }: { p: WellbeingProvider }) {

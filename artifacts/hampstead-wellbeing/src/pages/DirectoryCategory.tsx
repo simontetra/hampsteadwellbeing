@@ -38,6 +38,16 @@ export default function DirectoryCategory({ params }: { params: { slug: string }
             </p>
           </div>
 
+          {category.notice && (
+            <p
+              role="note"
+              className="max-w-3xl mb-8 rounded-2xl border px-5 py-4 font-sans text-sm leading-relaxed"
+              style={{ borderColor: "#9a6b4f", background: "#f7efe9", color: "#2C1F14" }}
+            >
+              {category.notice}
+            </p>
+          )}
+
           <p className="text-xs text-muted-foreground mb-5">
             {providers.length} listing{providers.length !== 1 ? "s" : ""}
           </p>

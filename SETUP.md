@@ -43,7 +43,7 @@ So search engines read each page's text without running JavaScript, and the site
 Everything is in `artifacts/hampstead-wellbeing/src/data/wellbeingDirectory.ts`.
 
 - **A listing:** add a line to `wellbeingProviders`. Its `category` must match a category's `name` exactly.
-- **A category:** add an entry to `directoryCategories` (name, slug, heading, intro). The category page, `/directory/<slug>`, its sitemap entry, the filter button and the footer link all follow from that entry. Add a colour for it in `categoryColour` in `src/components/WellbeingDirectory.tsx` (otherwise it uses the default brown).
+- **A category:** add an entry to `directoryCategories` (name, slug, heading, intro, and an optional `notice` shown above the listings). The category page, `/directory/<slug>`, its sitemap entry, the filter button and the footer link all follow from that entry. Add a colour for it in `categoryColour` in `src/components/WellbeingDirectory.tsx` (otherwise it uses the default brown).
 - **A new standalone page:** add its route in `src/App.tsx` and its title and description in `src/lib/seo.ts`, so it's built and listed in the sitemap.
 
 Pushing to `main` deploys automatically.

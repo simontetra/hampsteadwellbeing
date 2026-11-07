@@ -6,8 +6,12 @@ export const contactSchema = z.object({
   email: z.string().email("Please enter a valid email address"),
   subject: z.enum([
     "General Enquiry",
+    "Dordogne Retreat",
+    "Yoga Classes",
     "Education",
     "Wellbeing",
+    "Wellbeing Services",
+    "Suggest a listing",
     "Partnerships",
     "Other"
   ], {
